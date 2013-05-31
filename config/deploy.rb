@@ -17,6 +17,7 @@ namespace :deploy do
   task :finalize_update do
     location = fetch(:template_dir, "config/deploy") + "/#{application}.rb.erb"
     put ERB.new(File.read(location)).result(binding), "/usr/share/foreman/bundler.d/#{application}.rb"
+    run %Q{cd ~foreman && #{try_sudo} bundle install --local}
     run %Q{#{try_sudo} touch /usr/share/foreman/tmp/restart.txt}
   end
 end
