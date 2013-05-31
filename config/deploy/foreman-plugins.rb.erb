@@ -1,0 +1,5 @@
+<%
+  `git ls-files`.split.reject { |dir| dir =~ /^(\.|config|Capfile)/ }.each do |dir|
+%>
+gem '<%= dir %>', :path => '<%= current_path %>/<%= dir %>'
+<% end %>

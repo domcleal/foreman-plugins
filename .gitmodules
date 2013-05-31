@@ -1,0 +1,9 @@
+[submodule "foreman_hooks"]
+	path = foreman_hooks
+	url = https://github.com/domcleal/foreman_hooks
+[submodule "foreman_templates"]
+	path = foreman_templates
+	url = https://github.com/GregSutcliffe/foreman_templates
+[submodule "foreman_epel_release"]
+	path = foreman_epel_release
+	url = https://github.com/frimik/foreman_epel_release
